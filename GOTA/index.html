@@ -11,10 +11,11 @@
 
         <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
         <link href="styles/main.css" rel="stylesheet" />
+        <link href="styles/gota_style.css" rel="stylesheet" />
     </head>
     <body>
-        <div data-role="view" id="tabstrip-home" data-title="Hello World!">
-            <h1>Welcome!</h1>
+        <div data-role="view" id="news" data-title="News : GOTA">
+            <h1>NEWS</h1>
             <p>
                 Icenium&trade; enables you to build cross-platform device applications regardless of your 
                 development platform by combining the convenience of a local development toolset with the 
@@ -22,25 +23,102 @@
             </p>
         </div>
 
-        <div data-role="view" id="tabstrip-uiinteraction" data-title="UI Interaction">
-            <h1>Say Hello!</h1>
-            <div id='helloWorldInput'>
-                <label for="txtName" style="display: inline-block;">Enter your name:</label>
-                <input type="text" id="txtName" value="" />
-            </div>
-            <div id='helloWorldText' style="display:block;"></div>
-            <div class="buttonArea">
-                <a id="resetButton" data-role="button" data-click="sayHelloReset" data-icon="refresh">Reset</a>
-                <a id="submitButton" data-role="button" data-click="sayHello" data-icon="compose">Submit</a>
-            </div>
-        </div>
+        <div data-role="view" id="nominates" data-title="Nominés">
+            <!--<ul data-role="listview" data-style="inset" data-type="group">-->
+            <ul data-role="listview" data-type="group">
+                <li>
+                    Catégories
+                    <ul>
+                        <li data-icon="toprated">
+                            <a href="#musique">
+                                Musique
+                                <div class="colorBand" style="background-color:#FF6600;"></div>                                
+                            </a>                            
+                        </li>
+                        <li data-icon="bookmarks">
+                            <a href="#litterature">
+                                Littérature
+                                <div class="colorBand" style="background-color:#3366FF;"></div>                                  
+                            </a>                            
+                        </li>
+                        <li data-icon="globe">
+                            <a href="#cinema">
+                                Cinéma
+                                <div class="colorBand" style="background-color:#FEC500;"></div>                                  
+                            </a>                            
+                        </li>
+                        <li data-icon="toprated">
+                            <a href="#comedie">
+                                Comédien
+                                <div class="colorBand" style="background-color:#FF0000;"></div>                                  
+                            </a>                            
+                        </li>
+                        <li data-icon="toprated">
+                            <a href="#sport">
+                                Sport
+                                <div class="colorBand" style="background-color:#008000;"></div>                                  
+                            </a>                            
+                        </li>
+                        <li data-icon="globe">
+                            <a href="#mode">
+                                Mode
+                                <div class="colorBand" style="background-color:#FF99CC;"></div>                                  
+                            </a>                            
+                        </li>
+                        <li data-icon="globe">
+                            <a href="#entrepreneur">
+                                Entrepreneur
+                                <div class="colorBand" style="background-color:#800080;"></div>                                  
+                            </a>                            
+                        </li>
+                        <li data-icon="toprated">
+                            <a href="#jury">
+                                Jury
+                                <div class="colorBand" style="background-color:#000000;"></div>                                  
+                            </a>                            
+                        </li>
+                    </ul>
+                </li>
+            </ul>
 
-        <div data-role="view" id="tabstrip-geolocation" data-title="Geolocation">
+        </div>                
+        <!--------------------------------------------------------------->
+        <!--------------------------------------------------------------->
+        
+
+        <div data-role="view" id="videos" data-title="Vidéos">
             <h1>My Location</h1>
             <div id="geoLocationContainer">
                 <div id="myLocation">Unable to get location information. Please check your network connection and try again.</div>
                 <a id="refreshMap" data-role="button" data-click="getLocation" data-icon="refresh">Refresh Location</a>
                 <div id="map_canvas"></div>
+            </div>
+        </div>
+
+        <div data-role="view" id="gota" data-title="Le GOTA">
+            <h1>Le GOTA, c'est quoi?</h1>
+            <div id="gotaContainer">
+                <div id="myLocation">
+                    Le Gala Officiel des Talents d'Afrique, Antilles et de la Diaspora.<br>2013, 1ere Edition
+                </div>
+            </div>
+            <h1>Contacts</h1>
+            <div id="gotaContainer">
+                <div id="myLocation">Unable to get location information. Please check your network connection and try again.</div>
+            </div>
+            <h1>Ou acheter sa place</h1>
+            <div id="gotaContainer">
+                <div id="myLocation">
+                    <b>FNAC</b> : Unable to get location information.
+                    <b>KADEO</b> : Unable to get location information. 
+                    <b>LeGota.fr</b> : Unable to get location information.   
+                    <b>FNAC</b> : Unable to get location information.
+                    <b>KADEO</b> : Unable to get location information. 
+                    <b>LeGota.fr</b> : Unable to get location information.   
+                    <b>FNAC</b> : Unable to get location information.
+                    <b>KADEO</b> : Unable to get location information. 
+                    <b>LeGota.fr</b> : Unable to get location information.                    
+                </div>
             </div>
         </div>
 
@@ -53,12 +131,175 @@
 
             <div data-role="footer">
                 <div data-role="tabstrip">
-                    <a href="#tabstrip-home" data-icon="home">Home</a>
-                    <a href="#tabstrip-uiinteraction" data-icon="share">UI Interaction</a>
-                    <a href="#tabstrip-geolocation" data-icon="globe">Geolocation</a>
+                    <a href="#news" data-transition="none" data-icon="home">News</a>
+                    <a href="#nominates" data-transition="none" data-icon="more">Nominés</a>
+                    <a href="#videos" data-transition="none" data-icon="play">Vidéos</a>
+                    <a href="#gota" data-transition="none" data-icon="globe">Le GOTA</a>
                 </div>
             </div>
         </div>
+        
+        
+        <!--------------------------------------------------------------->
+        <!--------------------------------------------------------------->
+        <!--------------------------------------------------------------->
+        <!--------------------------------------------------------------->
+        
+        
+        
+        <div data-role="view" id="musique" data-init="mobileListViewHeadersInit" data-title="Musique">
+            <header data-role="header">
+                <div data-role="navbar">
+                    <a href="#nominates" id="back-button" class="nav-button" data-align="left" data-transition="slide:right" data-role="backbutton">Back</a>
+                    <span data-role="view-title">Musique</span>
+                </div>
+            </header>
+
+            <ul id="fixed-listview"></ul>
+            
+        </div>
+        
+        <script type="text/x-kendo-template" id="listviewHeadersTemplate">
+    		<img class="item-photo" src="${url}" />
+    		<h3 class="item-title">${name}</h3>
+    		<p class="item-info">${description}</p>
+    		<a data-role="button" class="details-link">Order</a>
+    	</script>
+    
+    	<script>
+    		var groupedData = [
+    			{ name: "Fally Ipupa", description: "Organic greens topped with market fresh sashimi, wasabi soy vinaigrette.", url: "images/Fally.jpg", letter: "S" },
+    			{ name: "Jessy Matador", description: "A nice seaweed salad.", url: "images/Jessy.jpg", letter: "S" },
+    			{ name: "Kayzha", description: "Boiled soy beans with salt.", url: "images/kaysha.jpg", letter: "E" },
+    			{ name: "Lokua Kanza", description: "Tuna pieces.", url: "images/lokua.jpg", letter: "M" },
+    			{ name: "Marcel Boungou", description: "Tuna roll with wasabi.", url: "images/marcel.jpg", letter: "T" },
+    			{ name: "Philip Monteiro", description: "Crab sticks, avocado and cucumber.", url: "images/philip.jpg", letter: "C" }
+    		];
+    
+    		function mobileListViewHeadersInit() {
+    			$("#fixed-listview").kendoMobileListView({
+    				dataSource: kendo.data.DataSource.create({data: groupedData, group: "letter" }),
+    				template: $("#listviewHeadersTemplate").html(),
+    				headerTemplate: "${value}",
+    				fixedHeaders: true
+    			});
+    		}
+    	</script>
+        
+        
+        
+        
+        <div data-role="view" id="litterature" data-title="Literrature">
+            <header data-role="header">
+                <div data-role="navbar">
+                    <a href="#nominates" id="back-button" class="nav-button" data-align="left" data-transition="slide:right" data-role="backbutton">Back</a>
+                    <span data-role="view-title">Musique</span>
+                </div>
+            </header>
+            <h1>NEWS</h1>
+            <p>
+                Icenium&trade; enables you to build cross-platform device applications regardless of your 
+                development platform by combining the convenience of a local development toolset with the 
+                power and flexibility of the cloud.
+            </p>
+        </div>
+        
+        <div data-role="view" id="cinema" data-title="Cinéma">
+            <header data-role="header">
+                <div data-role="navbar">
+                    <a href="#nominates" id="back-button" class="nav-button" data-align="left" data-transition="slide:right" data-role="backbutton">Back</a>
+                    <span data-role="view-title">Musique</span>
+                </div>
+            </header>
+            <h1>NEWS</h1>
+            <p>
+                Icenium&trade; enables you to build cross-platform device applications regardless of your 
+                development platform by combining the convenience of a local development toolset with the 
+                power and flexibility of the cloud.
+            </p>
+        </div>
+        
+        <div data-role="view" id="comedie" data-title="Comédien">
+            <header data-role="header">
+                <div data-role="navbar">
+                    <a href="#nominates" id="back-button" class="nav-button" data-align="left" data-transition="slide:right" data-role="backbutton">Back</a>
+                    <span data-role="view-title">Musique</span>
+                </div>
+            </header>
+            <h1>NEWS</h1>
+            <p>
+                Icenium&trade; enables you to build cross-platform device applications regardless of your 
+                development platform by combining the convenience of a local development toolset with the 
+                power and flexibility of the cloud.
+            </p>
+        </div>
+        
+        <div data-role="view" id="sport" data-title="Sport">
+            <header data-role="header">
+                <div data-role="navbar">
+                    <a href="#nominates" id="back-button" class="nav-button" data-align="left" data-transition="slide:right" data-role="backbutton">Back</a>
+                    <span data-role="view-title">Musique</span>
+                </div>
+            </header>
+            <h1>NEWS</h1>
+            <p>
+                Icenium&trade; enables you to build cross-platform device applications regardless of your 
+                development platform by combining the convenience of a local development toolset with the 
+                power and flexibility of the cloud.
+            </p>
+        </div>
+        
+        <div data-role="view" id="mode" data-title="Mode">
+            <header data-role="header">
+                <div data-role="navbar">
+                    <a href="#nominates" id="back-button" class="nav-button" data-align="left" data-transition="slide:right" data-role="backbutton">Back</a>
+                    <span data-role="view-title">Musique</span>
+                </div>
+            </header>
+            <h1>NEWS</h1>
+            <p>
+                Icenium&trade; enables you to build cross-platform device applications regardless of your 
+                development platform by combining the convenience of a local development toolset with the 
+                power and flexibility of the cloud.
+            </p>
+        </div>
+        
+        <div data-role="view" id="entrepreneur" data-title="Entrepreneur">
+            <header data-role="header">
+                <div data-role="navbar">
+                    <a href="#nominates" id="back-button" class="nav-button" data-align="left" data-transition="slide:right" data-role="backbutton">Back</a>
+                    <span data-role="view-title">Musique</span>
+                </div>
+            </header>
+            <h1>NEWS</h1>
+            <p>
+                Icenium&trade; enables you to build cross-platform device applications regardless of your 
+                development platform by combining the convenience of a local development toolset with the 
+                power and flexibility of the cloud.
+            </p>
+        </div>
+        
+        <div data-role="view" id="jury" data-title="Jury">
+            <header data-role="header">
+                <div data-role="navbar">
+                    <a href="#nominates" id="back-button" class="nav-button" data-align="left" data-transition="slide:right" data-role="backbutton">Back</a>
+                    <span data-role="view-title">Musique</span>
+                </div>
+            </header>
+            <h1>NEWS</h1>
+            <p>
+                Icenium&trade; enables you to build cross-platform device applications regardless of your 
+                development platform by combining the convenience of a local development toolset with the 
+                power and flexibility of the cloud.
+            </p>
+        </div>
+        
+        <!--------------------------------------------------------------->
+        <!--------------------------------------------------------------->
+        <!--------------------------------------------------------------->
+        <!--------------------------------------------------------------->
+        
+        
 
         <script>
             var app = new kendo.mobile.Application(document.body, { transition: "slide", layout: "mobile-tabstrip" });
